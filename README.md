@@ -16,7 +16,7 @@ Download both .py's, and scroll through them - try to make sense of my spaghetti
 Fix any hard coded paths that still exist in the code to match your PC
 
 2)
-Try the youtube to mp3 script - you'll get an error. Left a comment in the code, but youtube changed something and the module has not been updated to reflect that change yet. There's an explanation on stackoverflow on value to change and how to do it - takes like 20 seconds. I'll link it here once I find it.
+Try the youtube to mp3 script - you'll get an error from the pytube module. Btw go install that with pip -- left a comment below on how to use it if you're unfamiliar. Youtube changed something and the module has not been updated to reflect that change yet. There's an explanation on stackoverflow on value to change and how to do it - takes like 20 seconds. I'll link it here once I find it, but if you look up the error it throws you should be able to get to it real quick.
 Once you confirm you're able to run it and save an .mp3 you're good to go on.
 
 3)
