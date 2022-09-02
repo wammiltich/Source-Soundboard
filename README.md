@@ -8,7 +8,7 @@ Any other location and any other filename (even if saved in the same folder) wil
 AFAIK there is no way around this unfortunately.
 
 Therefore, soundboard.py works as an intermediator that watches for key presses, and if a key that is mapped is pressed, it will write the corresponding file to that location.
-There is a series of commands all strung together that you need to paste into cs terminal to enable this trick
+There is a series of commands all strung together that you need to paste into cs terminal to enable this trick.
 So, the overall process to get this thing to work on a new machine is as follows:
 
 1) 
@@ -27,3 +27,6 @@ Now this is the easy part, hoo-rah. Open up soundboard.py and take a gander at t
 
 5)
 I don't use IDE's, I use notepad ++ for everything. So, if you're having any trouble figuring out how to run these files, open up CMD and paste "python C:\----\soundboard.py" and it'll instantiate. If you get any errors regarding "No package/module named {something}", use pip. If you don't know what pip is - it's your new bestfriend. Need the keyboard module? Open up CMD and run "pip install keyboard". Crazy stuff! But be careful - pip is run off of PyPi and anyone can upload things to it if the name hasn't already been taken. Always check out the project details on the website before installing it - there is little to no moderation! People WILL upload maliscious packages that are a slight typo away from a popular package. Be safe and measure twice!
+
+6) GLHF
+If you got it all set up right, you should be seeing the terminal window print out the path to the audio file when you press the corresponding key. If you see that, the voice_input.wav file is successfully updating to each sound. Now that it's working, open up CSGO and paste this ugly command in the dev terminal: bind mouse3 music_on;alias music_on "voice_inputfromfile 1;+voicerecord; voice_loopback 1; bind mouse3 music_off";alias music_off "voice_inputfromfile 0;-voicerecord; voice_loopback 0; bind mouse3 music_on". Pretty gross - but makes it where you can hear the voicelines/sounds as well. Press middle mouse to start, press it again to stop. GG
