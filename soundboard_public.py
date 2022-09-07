@@ -10,24 +10,20 @@ Essentially; make a folder of .wav files that meet the csgo/source engine requir
 Then, for each preset provide the path to the folder as audio_dir
 and then map the keys as seen below. Have fun!
 
-'''
-
-import os,keyboard,time,shutil,re
-from keyboard import *
-'''
 paste <this> into CSGO terminal to add functionality to middle mosue button (click to start, click to stop): 
 
 bind mouse3 music_on;alias music_on "voice_inputfromfile 1;+voicerecord; voice_loopback 1; bind mouse3 music_off";alias music_off "voice_inputfromfile 0;-voicerecord; voice_loopback 0; bind mouse3 music_on"
 '''
 
-# I was going to change this but i think this might actually work for 99% of yall, but if things
-# dont work,,, check the paths!!!!
+import os,keyboard,time,shutil,re
+from keyboard import *
+
+
+# Should be fine, but updaate if your path is different
 dest = r"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\voice_input.wav"
-library = {} # dw it makes its own dict
+library = {} 
 
-# i got tired of having to switch between these so i added a protocol to allow 
-# users to make several "SETS", and then just set which one they wanted to use !! HERE !!:
-
+# Allows you to have serveral 'sets', select the one you want to use by changing this value
 # \/\/\/\/\/\/
 soundset = 1
 # ^^^^^^^^^
@@ -75,14 +71,8 @@ elif soundset ==2:
                  "NUM_7":library["Toto"],
                  "NUM_8":library["BonieTyler"],
                  "NUM_9":library["DangerZone"]}
-# NOTE: comment out keys you dont use or it will raise an error
-# I don't feel like adding handlign for this - for now. i'll fix laters
-'''
-feel free to add more presets. just leaving mine as example(s)
-just copy paste and add elif soundset == # to mark it :)
-'''
+# NOTE: comment out keys you dont use like I've done for set 2 or it will raise an error
 
-''' dont worry about this  part.. .it'll run itself if you set up the folder(s) right '''
 keys = soundKeys.keys()
 currentsound = ""
 while True:
