@@ -1,8 +1,6 @@
 '''
-Hey MTV, welcome to my crib
-Follow the comments to figure out how to set up a "soundset"/preset of soundboard
-Essentially; make a folder of .wav files that meet the csgo/source engine requirements and turn it into a dictionary
-(pssst i hate paid software so just use audacity to modify mp3 files to these requirements):
+Make a folder of .wav files that meet the csgo/source engine requirements and turn it into a dictionary
+These djustments to the .wav files can be done in audacity:
 - 16 bit 
 - mono channel
 - 22050 Hz "project rate"   
@@ -19,7 +17,7 @@ import os,keyboard,time,shutil,re
 from keyboard import *
 
 
-# Should be fine, but updaate if your path is different
+# This is the default for most, but update if your path is different
 dest = r"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\voice_input.wav"
 library = {} 
 
@@ -78,4 +76,4 @@ currentsound = ""
 while True:
     for key in keys:
         if is_pressed(key):assignSound(soundKeys[key])
-    time.sleep(.01) # buffer to make sure you don't kill ur CPU while watching keys
+    time.sleep(.01) # Add buffer here to throttle the hardware demands
